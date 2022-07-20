@@ -198,6 +198,7 @@ Partial Class pdfCreator
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "pdfCreator"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PDF Creator"
         Me.Panel1.ResumeLayout(False)
         Me.resumePanel.ResumeLayout(False)
