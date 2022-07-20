@@ -23,18 +23,18 @@ Partial Class pdfCreator
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.genarateButton = New System.Windows.Forms.Button()
-        Me.resumePanel = New System.Windows.Forms.Panel()
-        Me.fullNameLabel = New System.Windows.Forms.Label()
-        Me.Label = New System.Windows.Forms.Label()
-        Me.addressLabel = New System.Windows.Forms.Label()
-        Me.emailLabel = New System.Windows.Forms.Label()
-        Me.contactLabel = New System.Windows.Forms.Label()
-        Me.filenameLabel = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Save = New System.Windows.Forms.Button()
+        Me.genarateButton = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.resumePanel = New System.Windows.Forms.Panel()
+        Me.Label = New System.Windows.Forms.Label()
+        Me.filenameLabel = New System.Windows.Forms.Label()
+        Me.contactLabel = New System.Windows.Forms.Label()
+        Me.emailLabel = New System.Windows.Forms.Label()
+        Me.addressLabel = New System.Windows.Forms.Label()
+        Me.fullNameLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.resumePanel.SuspendLayout()
         Me.SuspendLayout()
@@ -45,7 +45,7 @@ Partial Class pdfCreator
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Save)
         Me.Panel1.Controls.Add(Me.genarateButton)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -53,15 +53,35 @@ Partial Class pdfCreator
         Me.Panel1.Size = New System.Drawing.Size(121, 301)
         Me.Panel1.TabIndex = 0
         '
-        'Label1
+        'Button3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(183, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(279, 33)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Resume Generator"
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(10, 228)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(96, 59)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Exit"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(10, 156)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(96, 59)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Clear"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Save
+        '
+        Me.Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Save.Location = New System.Drawing.Point(10, 82)
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(96, 59)
+        Me.Save.TabIndex = 2
+        Me.Save.Text = "Save"
+        Me.Save.UseVisualStyleBackColor = True
         '
         'genarateButton
         '
@@ -72,6 +92,16 @@ Partial Class pdfCreator
         Me.genarateButton.TabIndex = 2
         Me.genarateButton.Text = "Generate"
         Me.genarateButton.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(183, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(279, 33)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Resume Generator"
         '
         'resumePanel
         '
@@ -89,16 +119,6 @@ Partial Class pdfCreator
         Me.resumePanel.TabIndex = 2
         Me.resumePanel.Visible = False
         '
-        'fullNameLabel
-        '
-        Me.fullNameLabel.AutoSize = True
-        Me.fullNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fullNameLabel.Location = New System.Drawing.Point(3, 43)
-        Me.fullNameLabel.Name = "fullNameLabel"
-        Me.fullNameLabel.Size = New System.Drawing.Size(97, 24)
-        Me.fullNameLabel.TabIndex = 1
-        Me.fullNameLabel.Text = "Fullname"
-        '
         'Label
         '
         Me.Label.AutoSize = True
@@ -108,36 +128,6 @@ Partial Class pdfCreator
         Me.Label.Size = New System.Drawing.Size(202, 24)
         Me.Label.TabIndex = 1
         Me.Label.Text = "Resume Information:"
-        '
-        'addressLabel
-        '
-        Me.addressLabel.AutoSize = True
-        Me.addressLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addressLabel.Location = New System.Drawing.Point(3, 76)
-        Me.addressLabel.Name = "addressLabel"
-        Me.addressLabel.Size = New System.Drawing.Size(87, 24)
-        Me.addressLabel.TabIndex = 1
-        Me.addressLabel.Text = "Address"
-        '
-        'emailLabel
-        '
-        Me.emailLabel.AutoSize = True
-        Me.emailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.emailLabel.Location = New System.Drawing.Point(3, 111)
-        Me.emailLabel.Name = "emailLabel"
-        Me.emailLabel.Size = New System.Drawing.Size(62, 24)
-        Me.emailLabel.TabIndex = 1
-        Me.emailLabel.Text = "Email"
-        '
-        'contactLabel
-        '
-        Me.contactLabel.AutoSize = True
-        Me.contactLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.contactLabel.Location = New System.Drawing.Point(3, 147)
-        Me.contactLabel.Name = "contactLabel"
-        Me.contactLabel.Size = New System.Drawing.Size(80, 24)
-        Me.contactLabel.TabIndex = 1
-        Me.contactLabel.Text = "Contact"
         '
         'filenameLabel
         '
@@ -149,35 +139,45 @@ Partial Class pdfCreator
         Me.filenameLabel.TabIndex = 1
         Me.filenameLabel.Text = "Filename: PILAPIL_ROMWIL JAMES.pdf"
         '
-        'Button1
+        'contactLabel
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(10, 82)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 59)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.contactLabel.AutoSize = True
+        Me.contactLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.contactLabel.Location = New System.Drawing.Point(3, 147)
+        Me.contactLabel.Name = "contactLabel"
+        Me.contactLabel.Size = New System.Drawing.Size(80, 24)
+        Me.contactLabel.TabIndex = 1
+        Me.contactLabel.Text = "Contact"
         '
-        'Button2
+        'emailLabel
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(10, 156)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 59)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.emailLabel.AutoSize = True
+        Me.emailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.emailLabel.Location = New System.Drawing.Point(3, 111)
+        Me.emailLabel.Name = "emailLabel"
+        Me.emailLabel.Size = New System.Drawing.Size(62, 24)
+        Me.emailLabel.TabIndex = 1
+        Me.emailLabel.Text = "Email"
         '
-        'Button3
+        'addressLabel
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(10, 228)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 59)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Exit"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.addressLabel.AutoSize = True
+        Me.addressLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addressLabel.Location = New System.Drawing.Point(3, 76)
+        Me.addressLabel.Name = "addressLabel"
+        Me.addressLabel.Size = New System.Drawing.Size(87, 24)
+        Me.addressLabel.TabIndex = 1
+        Me.addressLabel.Text = "Address"
+        '
+        'fullNameLabel
+        '
+        Me.fullNameLabel.AutoSize = True
+        Me.fullNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fullNameLabel.Location = New System.Drawing.Point(3, 43)
+        Me.fullNameLabel.Name = "fullNameLabel"
+        Me.fullNameLabel.Size = New System.Drawing.Size(97, 24)
+        Me.fullNameLabel.TabIndex = 1
+        Me.fullNameLabel.Text = "Fullname"
         '
         'pdfCreator
         '
@@ -210,5 +210,5 @@ Partial Class pdfCreator
     Friend WithEvents filenameLabel As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Save As Button
 End Class
