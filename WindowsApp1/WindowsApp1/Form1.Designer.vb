@@ -41,7 +41,7 @@ Partial Class pdfCreator
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.exitButton)
         Me.Panel1.Controls.Add(Me.clearButton)
@@ -55,43 +55,51 @@ Partial Class pdfCreator
         '
         'exitButton
         '
+        Me.exitButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.exitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.exitButton.Location = New System.Drawing.Point(10, 228)
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(96, 59)
         Me.exitButton.TabIndex = 2
         Me.exitButton.Text = "Exit"
-        Me.exitButton.UseVisualStyleBackColor = True
+        Me.exitButton.UseVisualStyleBackColor = False
         '
         'clearButton
         '
+        Me.clearButton.BackColor = System.Drawing.Color.White
+        Me.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.clearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clearButton.Location = New System.Drawing.Point(10, 156)
         Me.clearButton.Name = "clearButton"
         Me.clearButton.Size = New System.Drawing.Size(96, 59)
         Me.clearButton.TabIndex = 2
         Me.clearButton.Text = "Clear"
-        Me.clearButton.UseVisualStyleBackColor = True
+        Me.clearButton.UseVisualStyleBackColor = False
         '
         'SaveButton
         '
+        Me.SaveButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveButton.Location = New System.Drawing.Point(10, 82)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(96, 59)
         Me.SaveButton.TabIndex = 2
         Me.SaveButton.Text = "Save"
-        Me.SaveButton.UseVisualStyleBackColor = True
+        Me.SaveButton.UseVisualStyleBackColor = False
         '
         'genarateButton
         '
+        Me.genarateButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.genarateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.genarateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.genarateButton.Location = New System.Drawing.Point(10, 10)
         Me.genarateButton.Name = "genarateButton"
         Me.genarateButton.Size = New System.Drawing.Size(96, 59)
         Me.genarateButton.TabIndex = 2
         Me.genarateButton.Text = "Generate"
-        Me.genarateButton.UseVisualStyleBackColor = True
+        Me.genarateButton.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -183,6 +191,7 @@ Partial Class pdfCreator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(528, 301)
         Me.Controls.Add(Me.resumePanel)
         Me.Controls.Add(Me.Label1)
