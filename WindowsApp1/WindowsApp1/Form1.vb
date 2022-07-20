@@ -14,6 +14,7 @@ Imports System.Threading.Tasks
 Imports System.Windows.Forms
 Public Class pdfCreator
     Private Sub genarateButton_Click(sender As Object, e As EventArgs) Handles genarateButton.Click
+        ' review information of resume
         resumePanel.Visible = True
 
         Dim directory As String = "C:\Users\Rom\Desktop\5TH-YR-2ND-SEM\elec3\pdf-resume-creator-vb\resumeInfo.json"
@@ -24,9 +25,6 @@ Public Class pdfCreator
         addressLabel.Text = getJsonValue.address
         emailLabel.Text = getJsonValue.email
         contactLabel.Text = getJsonValue.contact
-    End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Close()
     End Sub
 
     Public Class jsonData
@@ -47,7 +45,78 @@ Public Class pdfCreator
 
     End Class
 
-    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+    Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
+
+        ' json file
+        Dim Directory As String = "C:\Users\Rom\Desktop\5TH-YR-2ND-SEM\elec3\pdf-resume-creator-vb\resumeInfo.json"
+        Dim jsonFile As String = File.ReadAllText(directory)
+        Dim getJsonValue As jsonData = JsonConvert.DeserializeObject(Of jsonData)(jsonFile)
+
+        ' pdf file
+        Dim pdfDirectory As String = "C:\Users\Rom\Desktop\5TH-YR-2ND-SEM\elec3\pdf-resume-creator-vb\PILAPIL_ROMWIL JAMES.pdf"
+        Dim pdfFile As Document = New Document()
+        PdfWriter.GetInstance(pdfFile, New FileStream(pdfDirectory, FileMode.Create))
+
+        'pdf writer
+        pdfFile.Open()
+
+        Dim completeName As Paragraph = New Paragraph(getJsonValue.fullName)
+        Dim completeAddress As Paragraph = New Paragraph(getJsonValue.address)
+        Dim emailContact As Paragraph = New Paragraph(getJsonValue.email + " | " + getJsonValue.contact + vbLf + vbLf)
+        Dim careerObjective As Paragraph = New Paragraph("Career Objective")
+        Dim obj As Paragraph = New Paragraph("  - " + getJsonValue.objective + vbLf + vbLf)
+        Dim proffessionalAttribute As Paragraph = New Paragraph("Proffesional Attibute")
+        Dim attribute As Paragraph = New Paragraph("  - " + getJsonValue.literate + vbLf + vbLf)
+        Dim education As Paragraph = New Paragraph("Education")
+        Dim schoolName As Paragraph = New Paragraph(getJsonValue.school)
+        Dim courseName As Paragraph = New Paragraph(getJsonValue.course)
+        Dim yearPresent As Paragraph = New Paragraph(getJsonValue.year + vbLf + vbLf)
+        Dim extracurricular As Paragraph = New Paragraph("Extracurricular Activity")
+        Dim activityName As Paragraph = New Paragraph(getJsonValue.activity + vbLf + vbLf)
+        Dim certicateEtc As Paragraph = New Paragraph("Certifications, Workshops, and Seminars Attended")
+        Dim certicateName1 As Paragraph = New Paragraph(getJsonValue.certificate1)
+        Dim certicateName2 As Paragraph = New Paragraph(getJsonValue.certificate2)
+        Dim certicateName3 As Paragraph = New Paragraph(getJsonValue.certificate3)
+        Dim horizontalBar As LineSeparator = New LineSeparator(3.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1)
+
+        completeName.Alignment = Element.ALIGN_CENTER
+        completeAddress.Alignment = Element.ALIGN_CENTER
+        emailContact.Alignment = Element.ALIGN_CENTER
+
+        pdfFile.Add(completeName)
+        pdfFile.Add(completeAddress)
+        pdfFile.Add(emailContact)
+        pdfFile.Add(horizontalBar)
+        pdfFile.Add(careerObjective)
+        pdfFile.Add(obj)
+        pdfFile.Add(horizontalBar)
+        pdfFile.Add(proffessionalAttribute)
+        pdfFile.Add(attribute)
+        pdfFile.Add(horizontalBar)
+        pdfFile.Add(education)
+        pdfFile.Add(schoolName)
+        pdfFile.Add(courseName)
+        pdfFile.Add(yearPresent)
+        pdfFile.Add(horizontalBar)
+        pdfFile.Add(extracurricular)
+        pdfFile.Add(activityName)
+        pdfFile.Add(horizontalBar)
+        pdfFile.Add(certicateEtc)
+        pdfFile.Add(certicateName1)
+        pdfFile.Add(certicateName2)
+        pdfFile.Add(certicateName3)
+
+
+
+        pdfFile.Close()
+        MessageBox.Show("test save button")
+    End Sub
+
+    Private Sub clearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
         resumePanel.Visible = False
+        fullNameLabel.Text = ""
+        addressLabel.Text = ""
+        emailLabel.Text = ""
+        contactLabel.Text = ""
     End Sub
 End Class

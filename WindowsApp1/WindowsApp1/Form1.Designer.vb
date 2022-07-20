@@ -23,9 +23,9 @@ Partial Class pdfCreator
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Save = New System.Windows.Forms.Button()
+        Me.exitButton = New System.Windows.Forms.Button()
+        Me.clearButton = New System.Windows.Forms.Button()
+        Me.SaveButton = New System.Windows.Forms.Button()
         Me.genarateButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.resumePanel = New System.Windows.Forms.Panel()
@@ -43,9 +43,9 @@ Partial Class pdfCreator
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Save)
+        Me.Panel1.Controls.Add(Me.exitButton)
+        Me.Panel1.Controls.Add(Me.clearButton)
+        Me.Panel1.Controls.Add(Me.SaveButton)
         Me.Panel1.Controls.Add(Me.genarateButton)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -53,35 +53,35 @@ Partial Class pdfCreator
         Me.Panel1.Size = New System.Drawing.Size(121, 301)
         Me.Panel1.TabIndex = 0
         '
-        'Button3
+        'exitButton
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(10, 228)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 59)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Exit"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.exitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.exitButton.Location = New System.Drawing.Point(10, 228)
+        Me.exitButton.Name = "exitButton"
+        Me.exitButton.Size = New System.Drawing.Size(96, 59)
+        Me.exitButton.TabIndex = 2
+        Me.exitButton.Text = "Exit"
+        Me.exitButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'clearButton
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(10, 156)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 59)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Clear"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.clearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.clearButton.Location = New System.Drawing.Point(10, 156)
+        Me.clearButton.Name = "clearButton"
+        Me.clearButton.Size = New System.Drawing.Size(96, 59)
+        Me.clearButton.TabIndex = 2
+        Me.clearButton.Text = "Clear"
+        Me.clearButton.UseVisualStyleBackColor = True
         '
-        'Save
+        'SaveButton
         '
-        Me.Save.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Save.Location = New System.Drawing.Point(10, 82)
-        Me.Save.Name = "Save"
-        Me.Save.Size = New System.Drawing.Size(96, 59)
-        Me.Save.TabIndex = 2
-        Me.Save.Text = "Save"
-        Me.Save.UseVisualStyleBackColor = True
+        Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.Location = New System.Drawing.Point(10, 82)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(96, 59)
+        Me.SaveButton.TabIndex = 2
+        Me.SaveButton.Text = "Save"
+        Me.SaveButton.UseVisualStyleBackColor = True
         '
         'genarateButton
         '
@@ -208,7 +208,7 @@ Partial Class pdfCreator
     Friend WithEvents addressLabel As Label
     Friend WithEvents fullNameLabel As Label
     Friend WithEvents filenameLabel As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Save As Button
+    Friend WithEvents exitButton As Button
+    Friend WithEvents clearButton As Button
+    Friend WithEvents SaveButton As Button
 End Class
